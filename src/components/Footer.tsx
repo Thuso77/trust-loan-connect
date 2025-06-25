@@ -14,13 +14,13 @@ const Footer = () => {
               className="h-12 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-quickaid-blue-100 mb-4">
-              Your trusted partner for fast, reliable, and transparent financial solutions. 
-              We're committed to helping you achieve your financial goals.
+              Your trusted partner for fast, reliable, and transparent personal loan solutions in South Africa. 
+              We're a registered FSP committed to helping you achieve your financial goals.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span className="text-sm">+27 11 123 4567</span>
+                <span className="text-sm">+27 21 123 4567</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span className="text-sm">Johannesburg, South Africa</span>
+                <span className="text-sm">Cape Town, South Africa</span>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
                   onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-quickaid-blue-100 hover:text-white transition-colors"
                 >
-                  Loan Products
+                  Personal Loans
                 </button>
               </li>
               <li>
@@ -72,21 +72,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Loan Products */}
+          {/* Personal Loan Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Loan Products</h4>
+            <h4 className="text-lg font-semibold mb-4">Personal Loans</h4>
             <ul className="space-y-2">
               <li>
-                <span className="text-quickaid-blue-100">Personal Loans</span>
+                <span className="text-quickaid-blue-100">Debt Consolidation</span>
               </li>
               <li>
-                <span className="text-quickaid-blue-100">Home Loans</span>
+                <span className="text-quickaid-blue-100">Emergency Expenses</span>
               </li>
               <li>
-                <span className="text-quickaid-blue-100">Auto Loans</span>
+                <span className="text-quickaid-blue-100">Home Improvements</span>
               </li>
               <li>
-                <span className="text-quickaid-blue-100">Business Loans</span>
+                <span className="text-quickaid-blue-100">Special Occasions</span>
               </li>
             </ul>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="border-t border-quickaid-blue-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-quickaid-blue-100 text-sm">
-              © 2024 QuickAid Financial Services. All rights reserved.
+              © 2024 QuickAid Financial Services (FSP). All rights reserved. | Cape Town, South Africa
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">

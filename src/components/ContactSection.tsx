@@ -6,20 +6,20 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+27 11 123 4567", "+27 21 987 6543"],
+      details: ["+27 21 123 4567", "+27 21 987 6543"],
       description: "Call us during business hours"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@quickaid.co.za", "support@quickaid.co.za"],
+      details: ["info@quickaid.co.za", "loans@quickaid.co.za"],
       description: "We respond within 24 hours"
     },
     {
       icon: MapPin,
-      title: "Offices",
-      details: ["Johannesburg", "Cape Town", "Durban"],
-      description: "Multiple locations to serve you"
+      title: "Location",
+      details: ["Cape Town", "South Africa"],
+      description: "FSP Registered Company"
     },
     {
       icon: Clock,
@@ -43,8 +43,8 @@ const ContactSection = () => {
             Get in Touch
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Have questions about our loan products or need assistance with your application? 
-            Our friendly team is here to help you every step of the way.
+            Have questions about our personal loan products or need assistance with your application? 
+            Our friendly team in Cape Town is here to help you every step of the way.
           </p>
         </div>
 
@@ -75,29 +75,29 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
-                Ready to Apply?
+                Ready to Apply for Your Personal Loan?
               </h3>
               <p className="text-gray-700 mb-6">
-                The fastest way to get started is through our online application. 
+                The fastest way to get started is through our online personal loan application. 
                 It takes just a few minutes and you'll get an instant decision.
               </p>
               <button 
                 onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-quickaid text-white hover:opacity-90 transition-opacity px-8 py-3 rounded-lg font-semibold"
               >
-                Start Application
+                Start Personal Loan Application
               </button>
             </div>
             <div className="bg-quickaid-blue-50 rounded-lg p-6">
               <h4 className="text-xl font-semibold text-quickaid-blue-900 mb-4">
-                Need Help?
+                FSP Registered & Trusted
               </h4>
               <p className="text-gray-700 mb-4">
-                Our loan specialists are available to answer your questions and guide you through the process.
+                QuickAid Financial Services is a registered FSP (Financial Services Provider) based in Cape Town, ensuring compliance and trust.
               </p>
               <div className="space-y-2">
                 <p className="text-sm text-gray-600">
-                  <strong>Free Consultation:</strong> Call us for personalized advice
+                  <strong>Free Consultation:</strong> Call us for personalized personal loan advice
                 </p>
                 <p className="text-sm text-gray-600">
                   <strong>Quick Response:</strong> Email inquiries answered within 24 hours

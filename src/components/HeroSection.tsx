@@ -21,10 +21,10 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Quick & Reliable
-            <span className="block text-quickaid-blue-200">Financial Solutions</span>
+            <span className="block text-quickaid-blue-200">Personal Loans</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto">
-            Get the funding you need with our fast, transparent, and customer-focused loan services. 
+            Get the personal funding you need with our fast, transparent, and customer-focused loan services in South Africa. 
             Your financial goals are our priority.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

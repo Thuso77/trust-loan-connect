@@ -1,31 +1,31 @@
 
-import { CreditCard, Home, Car, Briefcase } from 'lucide-react';
+import { CreditCard, Shield, Clock, TrendingUp } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
       icon: CreditCard,
-      title: "Personal Loans",
-      description: "Flexible personal loans for any purpose - debt consolidation, home improvements, or unexpected expenses.",
-      features: ["Up to $50,000", "Competitive rates", "Quick approval", "Flexible terms"]
+      title: "Debt Consolidation",
+      description: "Combine multiple debts into one manageable monthly payment with a competitive interest rate.",
+      features: ["Lower monthly payments", "Single payment convenience", "Potential interest savings", "Simplified finances"]
     },
     {
-      icon: Home,
-      title: "Home Loans",
-      description: "Make your dream home a reality with our comprehensive home loan solutions.",
-      features: ["First-time buyer programs", "Refinancing options", "Expert guidance", "Competitive rates"]
+      icon: Shield,
+      title: "Emergency Expenses",
+      description: "Get quick access to funds for unexpected expenses like medical bills or urgent repairs.",
+      features: ["Fast approval process", "Same-day funding", "No collateral required", "Flexible repayment terms"]
     },
     {
-      icon: Car,
-      title: "Auto Loans",
-      description: "Drive away with confidence with our auto financing options for new and used vehicles.",
-      features: ["New & used cars", "Flexible terms", "Fast approval", "Direct dealer relationships"]
+      icon: TrendingUp,
+      title: "Home Improvements",
+      description: "Finance your home renovation projects to increase your property value and comfort.",
+      features: ["Competitive rates", "Large loan amounts", "Extended repayment periods", "No upfront fees"]
     },
     {
-      icon: Briefcase,
-      title: "Business Loans",
-      description: "Fuel your business growth with our tailored business financing solutions.",
-      features: ["Working capital", "Equipment financing", "Business expansion", "Startup funding"]
+      icon: Clock,
+      title: "Special Occasions",
+      description: "Fund life's special moments - weddings, education, or once-in-a-lifetime experiences.",
+      features: ["Quick decisions", "Flexible amounts", "Personalized terms", "Online application"]
     }
   ];
 
@@ -40,11 +40,11 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our Loan Products
+            Personal Loan Solutions
           </h2>
           <p className="text-lg text-quickaid-blue-100 max-w-3xl mx-auto">
-            Whether you're looking to consolidate debt, buy a home, finance a vehicle, or grow your business, 
-            we have the right loan solution for you.
+            Whether you're consolidating debt, handling an emergency, improving your home, or funding a special occasion, 
+            our personal loans are designed to meet your specific needs.
           </p>
         </div>
 
