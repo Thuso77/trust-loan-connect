@@ -17,13 +17,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - Much Larger */}
+        <div className="flex items-center justify-between h-28">
+          {/* Logo - Much Much Larger */}
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/500e89ea-11dc-4f27-98af-4e0e71bbaf5d.png" 
               alt="QuickAid Financial Services" 
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </div>
 
@@ -46,12 +46,6 @@ const Header = () => {
               className="text-gray-700 hover:text-quickaid-blue-600 transition-colors"
             >
               Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors"
-            >
-              How It Works
             </button>
           </nav>
 
@@ -95,12 +89,6 @@ const Header = () => {
                 className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
               >
                 Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('how-it-works')}
-                className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
-              >
-                How It Works
               </button>
               <Button 
                 onClick={() => scrollToSection('application')}

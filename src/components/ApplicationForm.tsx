@@ -3,191 +3,171 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ApplicationForm = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
-    idNumber: '',
+    idPassport: '',
     phoneNumber: '',
     email: '',
     loanAmount: '',
     message: ''
   });
 
-  const handleChange = (field: string, value: string) => {
+  const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    toast({
-      title: "Application Submitted Successfully!",
-      description: "We'll review your personal loan application and get back to you within 24 hours.",
-    });
-
-    // Reset form
-    setFormData({
-      fullName: '',
-      idNumber: '',
-      phoneNumber: '',
-      email: '',
-      loanAmount: '',
-      message: ''
-    });
-
-    setIsSubmitting(false);
+    console.log('Form submitted:', formData);
+    // Handle form submission here
   };
 
   return (
-    <section 
-      id="application" 
-      className="py-20 bg-cover bg-center relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.95), rgba(59, 130, 246, 0.95)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-      }}
-    >
+    <section id="application" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Apply for Your Personal Loan
-          </h2>
-          <p className="text-lg text-quickaid-blue-100 max-w-3xl mx-auto">
-            Take the first step towards your financial goals. Fill out our secure application form and get an instant decision for your personal loan.
-          </p>
-        </div>
-
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg shadow-xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="fullName" className="text-quickaid-blue-900">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-quickaid-blue-900 mb-6">
+              Apply for Your Personal Loan
+            </h2>
+            <p className="text-lg text-gray-700">
+              Complete this simple form to get started with your personal loan application. 
+              Our team will review your application and get back to you quickly.
+            </p>
+          </div>
+
+          <Card className="shadow-lg">
+            <CardHeader className="bg-gradient-quickaid text-white rounded-t-lg">
+              <CardTitle className="text-2xl">Personal Loan Application</CardTitle>
+              <CardDescription className="text-quickaid-blue-100">
+                All fields marked with * are required
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Full Name */}
+                <div className="space-y-2">
+                  <Label htmlFor="fullName" className="text-gray-700 font-medium">
                     Full Name *
                   </Label>
                   <Input
                     id="fullName"
                     type="text"
                     value={formData.fullName}
-                    onChange={(e) => handleChange('fullName', e.target.value)}
-                    required
-                    className="mt-1"
+                    onChange={(e) => handleInputChange('fullName', e.target.value)}
                     placeholder="Enter your full name"
+                    required
+                    className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
                   />
                 </div>
 
-                <div>
-                  <Label htmlFor="idNumber" className="text-quickaid-blue-900">
-                    ID Number / Passport Number *
+                {/* ID/Passport Number */}
+                <div className="space-y-2">
+                  <Label htmlFor="idPassport" className="text-gray-700 font-medium">
+                    ID Number or Passport Number *
                   </Label>
                   <Input
-                    id="idNumber"
+                    id="idPassport"
                     type="text"
-                    value={formData.idNumber}
-                    onChange={(e) => handleChange('idNumber', e.target.value)}
-                    required
-                    className="mt-1"
+                    value={formData.idPassport}
+                    onChange={(e) => handleInputChange('idPassport', e.target.value)}
                     placeholder="Enter your ID or passport number"
+                    required
+                    className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
                   />
                 </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="phoneNumber" className="text-quickaid-blue-900">
+                {/* Phone Number */}
+                <div className="space-y-2">
+                  <Label htmlFor="phoneNumber" className="text-gray-700 font-medium">
                     Phone Number *
                   </Label>
                   <Input
                     id="phoneNumber"
                     type="tel"
                     value={formData.phoneNumber}
-                    onChange={(e) => handleChange('phoneNumber', e.target.value)}
+                    onChange={(e) => handleInputChange('phoneNumber', e.target.value)}
+                    placeholder="Enter your phone number"
                     required
-                    className="mt-1"
-                    placeholder="+27 xx xxx xxxx"
+                    className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
                   />
                 </div>
 
-                <div>
-                  <Label htmlFor="email" className="text-quickaid-blue-900">
+                {/* Email */}
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-gray-700 font-medium">
                     Email Address *
                   </Label>
                   <Input
                     id="email"
                     type="email"
                     value={formData.email}
-                    onChange={(e) => handleChange('email', e.target.value)}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    placeholder="Enter your email address"
                     required
-                    className="mt-1"
-                    placeholder="your.email@example.com"
+                    className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
                   />
                 </div>
-              </div>
 
-              <div>
-                <Label htmlFor="loanAmount" className="text-quickaid-blue-900">
-                  Personal Loan Amount Requested (ZAR) *
-                </Label>
-                <Input
-                  id="loanAmount"
-                  type="text"
-                  value={formData.loanAmount}
-                  onChange={(e) => handleChange('loanAmount', e.target.value)}
-                  required
-                  className="mt-1"
-                  placeholder="R 50,000"
-                />
-              </div>
+                {/* Loan Amount */}
+                <div className="space-y-2">
+                  <Label htmlFor="loanAmount" className="text-gray-700 font-medium">
+                    Loan Amount Requested *
+                  </Label>
+                  <Select onValueChange={(value) => handleInputChange('loanAmount', value)}>
+                    <SelectTrigger className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500">
+                      <SelectValue placeholder="Select loan amount range" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="0-500">R0 - R500</SelectItem>
+                      <SelectItem value="500-2000">R500 - R2,000</SelectItem>
+                      <SelectItem value="2000-5000">R2,000 - R5,000</SelectItem>
+                      <SelectItem value="5000-10000">R5,000 - R10,000</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-              <div>
-                <Label htmlFor="message" className="text-quickaid-blue-900">
-                  Additional Message (Optional)
-                </Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => handleChange('message', e.target.value)}
-                  className="mt-1"
-                  rows={4}
-                  placeholder="Tell us more about your personal loan requirements or any questions you have..."
-                />
-              </div>
+                {/* Optional Message */}
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-gray-700 font-medium">
+                    Additional Message (Optional)
+                  </Label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    placeholder="Tell us more about your loan requirements..."
+                    rows={4}
+                    className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
+                  />
+                </div>
 
-              <div className="bg-quickaid-blue-50 rounded-lg p-4">
-                <p className="text-sm text-quickaid-blue-800">
-                  <strong>Your information is secure:</strong> We use bank-level encryption to protect your personal data. 
-                  By submitting this form, you agree to our terms and conditions and privacy policy. 
-                  QuickAid Financial Services is a registered FSP in Cape Town, South Africa.
-                </p>
-              </div>
+                {/* Submit Button */}
+                <Button 
+                  type="submit" 
+                  className="w-full bg-gradient-quickaid hover:opacity-90 transition-opacity text-lg py-6"
+                >
+                  Submit Application
+                </Button>
 
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-quickaid hover:opacity-90 transition-opacity text-lg py-6"
-              >
-                {isSubmitting ? 'Processing Personal Loan Application...' : 'Submit Personal Loan Application'}
-              </Button>
-            </form>
-
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
-                Need help with your personal loan application? Call us at 
-                <span className="text-quickaid-blue-600 font-semibold"> +27 21 123 4567</span>
-              </p>
-            </div>
-          </div>
+                {/* Disclaimer */}
+                <div className="text-center text-sm text-gray-600 mt-6">
+                  <p>
+                    By submitting this application, you agree to our terms and conditions. 
+                    QuickAid Financial Services is a registered FSP in South Africa.
+                  </p>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
