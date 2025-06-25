@@ -27,21 +27,13 @@ const HeroSection = () => {
             Get the personal funding you need with our fast, transparent, and customer-focused loan services in South Africa. 
             Your financial goals are our priority.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               onClick={scrollToApplication}
               className="bg-white text-quickaid-blue-900 hover:bg-gray-100 transition-colors text-lg px-8 py-4"
             >
               Apply Now - Quick Process
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-white text-white hover:bg-white hover:text-quickaid-blue-900 transition-colors text-lg px-8 py-4"
-            >
-              Learn More
             </Button>
           </div>
         </div>

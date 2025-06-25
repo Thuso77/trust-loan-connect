@@ -1,5 +1,5 @@
 
-import { CreditCard, Shield, Clock, TrendingUp } from 'lucide-react';
+import { CreditCard, Shield, Home, Calendar } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
@@ -16,13 +16,13 @@ const ServicesSection = () => {
       features: ["Fast approval process", "Same-day funding", "No collateral required", "Flexible repayment terms"]
     },
     {
-      icon: TrendingUp,
+      icon: Home,
       title: "Home Improvements",
       description: "Finance your home renovation projects to increase your property value and comfort.",
       features: ["Competitive rates", "Large loan amounts", "Extended repayment periods", "No upfront fees"]
     },
     {
-      icon: Clock,
+      icon: Calendar,
       title: "Special Occasions",
       description: "Fund life's special moments - weddings, education, or once-in-a-lifetime experiences.",
       features: ["Quick decisions", "Flexible amounts", "Personalized terms", "Online application"]

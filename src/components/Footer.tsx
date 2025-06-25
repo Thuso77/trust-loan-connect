@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-quickaid-blue-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <img 
@@ -31,45 +31,6 @@ const Footer = () => {
                 <span className="text-sm">Cape Town, South Africa</span>
               </div>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <button 
-                  onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-quickaid-blue-100 hover:text-white transition-colors"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-quickaid-blue-100 hover:text-white transition-colors"
-                >
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-quickaid-blue-100 hover:text-white transition-colors"
-                >
-                  Personal Loans
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-quickaid-blue-100 hover:text-white transition-colors"
-                >
-                  Contact Us
-                </button>
-              </li>
-            </ul>
           </div>
 
           {/* Personal Loan Info */}
