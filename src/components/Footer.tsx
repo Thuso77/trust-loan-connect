@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, CreditCard } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,8 +14,9 @@ const Footer = () => {
               className="h-12 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-quickaid-blue-100 mb-4">
-              Your trusted partner for fast, reliable, and transparent personal loan solutions in South Africa. 
-              We're a registered FSP committed to helping you achieve your financial goals.
+              After 1 year of serving Cape Town residents, QuickAid Financial Services has become 
+              a trusted FSP for fast, reliable, and transparent personal loan solutions. 
+              Better rates and service than competitors like Lula.co.za.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">
@@ -36,7 +37,7 @@ const Footer = () => {
           {/* Personal Loan Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Personal Loans</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-6">
               <li>
                 <span className="text-quickaid-blue-100">Debt Consolidation</span>
               </li>
@@ -50,6 +51,15 @@ const Footer = () => {
                 <span className="text-quickaid-blue-100">Special Occasions</span>
               </li>
             </ul>
+            
+            {/* Payment Methods */}
+            <div className="border-t border-quickaid-blue-700 pt-4">
+              <h5 className="text-sm font-semibold mb-2">We Accept</h5>
+              <div className="flex items-center space-x-2">
+                <CreditCard className="w-6 h-6 text-quickaid-blue-100" />
+                <span className="text-sm text-quickaid-blue-100">Visa Cards</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -57,7 +67,7 @@ const Footer = () => {
         <div className="border-t border-quickaid-blue-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-quickaid-blue-100 text-sm">
-              © 2024 QuickAid Financial Services (FSP). All rights reserved. | Cape Town, South Africa
+              © 2024 QuickAid Financial Services (FSP). All rights reserved. | Cape Town, South Africa | 1 Year in Business
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">

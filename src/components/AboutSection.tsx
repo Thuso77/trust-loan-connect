@@ -39,9 +39,9 @@ const AboutSection = () => {
             About QuickAid Financial Services
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            We're more than just a lending company. We're your financial partners, committed to helping 
-            individuals and small businesses achieve their dreams through accessible, transparent, and 
-            responsible lending solutions.
+            After 1 year in business, we've established ourselves as a trusted financial partner in Cape Town. 
+            Unlike competitors like Lula.co.za, we focus exclusively on personal loans with transparent terms 
+            and competitive rates for South African customers.
           </p>
         </div>
 
@@ -68,13 +68,13 @@ const AboutSection = () => {
                 Our Mission
               </h3>
               <p className="text-gray-700 mb-4">
-                To provide accessible financial solutions that empower individuals and businesses 
-                to achieve their goals while maintaining the highest standards of integrity and 
+                To provide accessible financial solutions that empower individuals to 
+                achieve their goals while maintaining the highest standards of integrity and 
                 customer service.
               </p>
               <p className="text-gray-700">
-                We believe that everyone deserves access to fair, transparent financial services 
-                that help build a better future.
+                After 1 year of serving Cape Town residents, we've built a reputation for 
+                fast, fair, and transparent personal lending.
               </p>
             </div>
             <div className="bg-gradient-quickaid rounded-lg p-6 text-white">
@@ -82,15 +82,15 @@ const AboutSection = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Licensed and regulated
+                  Licensed FSP in Cape Town
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  10+ years of experience
+                  1 year of proven service
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Thousands of satisfied customers
+                  Better rates than Lula.co.za
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
