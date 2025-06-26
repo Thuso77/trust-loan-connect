@@ -13,6 +13,7 @@ const ApplicationForm = () => {
     idPassport: '',
     phoneNumber: '',
     email: '',
+    workplace: '',
     loanAmount: '',
     message: ''
   });
@@ -112,6 +113,22 @@ const ApplicationForm = () => {
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     placeholder="Enter your email address"
+                    required
+                    className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
+                  />
+                </div>
+
+                {/* Workplace */}
+                <div className="space-y-2">
+                  <Label htmlFor="workplace" className="text-gray-700 font-medium">
+                    Where do you work? *
+                  </Label>
+                  <Input
+                    id="workplace"
+                    type="text"
+                    value={formData.workplace}
+                    onChange={(e) => handleInputChange('workplace', e.target.value)}
+                    placeholder="Enter your employer or workplace"
                     required
                     className="border-gray-300 focus:border-quickaid-blue-500 focus:ring-quickaid-blue-500"
                   />
