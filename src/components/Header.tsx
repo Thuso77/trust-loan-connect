@@ -17,13 +17,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28">
-          {/* Logo - Much Much Larger */}
+        <div className="flex items-center justify-between h-32">
+          {/* Logo - Maximum Size */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/500e89ea-11dc-4f27-98af-4e0e71bbaf5d.png" 
+              src="/lovable-uploads/7b41a6b8-ced4-41be-9652-9569d306b406.png" 
               alt="QuickAid Financial Services" 
-              className="h-24 w-auto"
+              className="h-28 w-auto"
             />
           </div>
 

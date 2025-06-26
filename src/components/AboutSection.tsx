@@ -1,4 +1,3 @@
-
 import { Shield, Clock, Users, Award } from 'lucide-react';
 
 const AboutSection = () => {
@@ -40,7 +39,7 @@ const AboutSection = () => {
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             After 1 year in business, we've established ourselves as a trusted financial partner in Cape Town. 
-            Unlike competitors like Lula.co.za, we focus exclusively on personal loans with transparent terms 
+            We focus exclusively on personal loans with transparent terms 
             and competitive rates for South African customers.
           </p>
         </div>
@@ -87,10 +86,6 @@ const AboutSection = () => {
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                   1 year of proven service
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Better rates than Lula.co.za
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>

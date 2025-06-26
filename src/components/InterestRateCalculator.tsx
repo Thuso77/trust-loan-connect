@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Calculator, CreditCard } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const InterestRateCalculator = () => {
@@ -42,7 +42,7 @@ const InterestRateCalculator = () => {
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Calculate your monthly payments and see how much you'll pay. 
-            Our rates are more competitive than Lula.co.za and other lenders.
+            We offer competitive interest rates.
           </p>
         </div>
 
@@ -117,8 +117,15 @@ const InterestRateCalculator = () => {
                 
                 <div className="mt-4 p-3 bg-white rounded border-l-4 border-quickaid-blue-600">
                   <div className="flex items-center">
-                    <CreditCard className="w-5 h-5 text-quickaid-blue-600 mr-2" />
-                    <span className="text-sm text-gray-600">We accept Visa payments</span>
+                    <div className="flex mr-2">
+                      <div className="w-8 h-5 bg-red-600 rounded-l-sm flex items-center justify-center mr-1">
+                        <span className="text-white text-xs font-bold">M</span>
+                      </div>
+                      <div className="w-8 h-5 bg-yellow-500 rounded-r-sm flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">C</span>
+                      </div>
+                    </div>
+                    <span className="text-sm text-gray-600">We accept Mastercard payments</span>
                   </div>
                 </div>
               </div>
