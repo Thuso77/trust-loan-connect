@@ -14,8 +14,8 @@ const Footer = () => {
               className="h-12 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-quickaid-blue-100 mb-4">
-              Over time, we've established ourselves as a trusted and reliable financial partner 
-              in Cape Town. We focus exclusively on personal loans with transparent terms 
+              Over time, we've established ourselves as a trusted and reliable financial partner. 
+              We focus exclusively on personal loans with transparent terms 
               and competitive rates for our customers.
             </p>
             <div className="space-y-2">
@@ -25,7 +25,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span className="text-sm">Cape Town, South Africa</span>
+                <span className="text-sm">South Africa</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Footer = () => {
         <div className="border-t border-quickaid-blue-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
-              © 2024 QuickAid Financial Services. All rights reserved. | Cape Town, South Africa
+              © 2024 QuickAid Financial Services. All rights reserved. | South Africa
             </p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
               <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">

@@ -2,9 +2,11 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,6 +14,11 @@ const Header = () => {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
+  };
+
+  const handleApplyNow = () => {
+    navigate('/application');
+    setIsMenuOpen(false);
   };
 
   return (
@@ -23,7 +30,8 @@ const Header = () => {
             <img 
               src="/lovable-uploads/7b41a6b8-ced4-41be-9652-9569d306b406.png" 
               alt="QuickAid Financial Services" 
-              className="h-28 w-auto"
+              className="h-28 w-auto cursor-pointer"
+              onClick={() => navigate('/')}
             />
           </div>
 
@@ -52,7 +60,7 @@ const Header = () => {
           {/* Apply Now Button - Desktop */}
           <div className="hidden md:block">
             <Button 
-              onClick={() => scrollToSection('application')}
+              onClick={handleApplyNow}
               className="bg-gradient-quickaid hover:opacity-90 transition-opacity"
             >
               Apply Now
@@ -91,7 +99,7 @@ const Header = () => {
                 Services
               </button>
               <Button 
-                onClick={() => scrollToSection('application')}
+                onClick={handleApplyNow}
                 className="bg-gradient-quickaid hover:opacity-90 transition-opacity w-full"
               >
                 Apply Now

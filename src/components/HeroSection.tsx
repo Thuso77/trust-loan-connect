@@ -1,8 +1,11 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
   const benefits = [
     "Quick response to your funding request!!!",
     "Competitive interest rates",
@@ -31,7 +34,7 @@ const HeroSection = () => {
             
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
               Need financial assistance? QuickAid Financial Services offers personal loans 
-              with competitive rates and transparent terms. Your trusted financial partner in Cape Town.
+              with competitive rates and transparent terms. Your trusted financial partner.
             </p>
 
             {/* Benefits List */}
@@ -51,7 +54,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-quickaid hover:opacity-90 transition-opacity text-lg px-8 py-6"
-                onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/application')}
               >
                 Apply Now
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -68,7 +71,7 @@ const HeroSection = () => {
 
             {/* Trust Indicators */}
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-600 mb-4">Trusted by Cape Town residents</p>
+              <p className="text-sm text-gray-600 mb-4">Trusted by customers nationwide</p>
               <div className="flex items-center justify-center lg:justify-start space-x-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-quickaid-blue-900">100%</div>

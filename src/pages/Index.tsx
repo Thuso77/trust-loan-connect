@@ -5,7 +5,6 @@ import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
 import InterestRateCalculator from '@/components/InterestRateCalculator';
 import HowItWorksSection from '@/components/HowItWorksSection';
-import ApplicationForm from '@/components/ApplicationForm';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -17,7 +16,6 @@ const Index = () => {
       <ServicesSection />
       <InterestRateCalculator />
       <HowItWorksSection />
-      <ApplicationForm />
       <Footer />
     </div>
   );
