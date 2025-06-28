@@ -51,7 +51,7 @@ const Footer = () => {
             {/* Payment Methods */}
             <div className="border-t border-quickaid-blue-700 pt-4">
               <h5 className="text-sm font-semibold mb-2">We Accept</h5>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 flex-wrap">
                 <img 
                   src="/lovable-uploads/cebf65b4-cd0e-4a17-8b61-1ee22da4ba3c.png" 
                   alt="EFT Secure" 
@@ -60,6 +60,11 @@ const Footer = () => {
                 <img 
                   src="/lovable-uploads/c9828dc0-77f0-46af-ba72-11ef5db52ed1.png" 
                   alt="Mastercard" 
+                  className="h-8 w-auto"
+                />
+                <img 
+                  src="/lovable-uploads/37119b3d-0556-4daa-ae1d-585cd3ad7f6d.png" 
+                  alt="Visa" 
                   className="h-8 w-auto"
                 />
               </div>
@@ -86,14 +91,17 @@ const Footer = () => {
               © 2024 QuickAid Financial Services. All rights reserved. | South Africa
             </p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
-              <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
-                Privacy Policy
+              <a href="/about" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
+                About Us
               </a>
-              <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
-                Terms of Service
+              <a href="/faq" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
+                FAQ
               </a>
-              <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
-                Responsible Lending
+              <a href="/terms" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
+                Terms & Conditions
+              </a>
+              <a href="/blog" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
+                Blog
               </a>
             </div>
           </div>

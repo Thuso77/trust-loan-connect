@@ -6,6 +6,7 @@ import ServicesSection from '@/components/ServicesSection';
 import InterestRateCalculator from '@/components/InterestRateCalculator';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <InterestRateCalculator />
       <HowItWorksSection />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
