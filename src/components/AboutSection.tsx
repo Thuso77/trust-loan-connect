@@ -1,3 +1,4 @@
+
 import { Shield, Clock, Users, Award } from 'lucide-react';
 
 const AboutSection = () => {
@@ -38,9 +39,9 @@ const AboutSection = () => {
             About QuickAid Financial Services
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            After 1 year in business, we've established ourselves as a trusted financial partner in Cape Town. 
+            Over time, we've established ourselves as a trusted and reliable financial partner in Cape Town. 
             We focus exclusively on personal loans with transparent terms 
-            and competitive rates for South African customers.
+            and competitive rates for our customers.
           </p>
         </div>
 
@@ -66,30 +67,46 @@ const AboutSection = () => {
               <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
                 Our Mission
               </h3>
-              <p className="text-gray-700 mb-4">
-                To provide accessible financial solutions that empower individuals to 
-                achieve their goals while maintaining the highest standards of integrity and 
-                customer service.
+              <p className="text-gray-700 mb-6">
+                To simplify and fast-track loans and make them more accessible, transparent, and affordable for our customers.
               </p>
+              
+              <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
+                Our Vision
+              </h3>
+              <p className="text-gray-700 mb-6">
+                To provide accessible financial solutions that empower individuals to achieve their goals and improve their quality of life.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
+                Our Values
+              </h3>
               <p className="text-gray-700">
-                After 1 year of serving Cape Town residents, we've built a reputation for 
-                fast, fair, and transparent personal lending.
+                The core values on which our business rests are integrity, professionalism, transparency, customer-focus, and diligence.
               </p>
             </div>
             <div className="bg-gradient-quickaid rounded-lg p-6 text-white">
               <h4 className="text-xl font-semibold mb-4">Why Choose Us?</h4>
               <ul className="space-y-2">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Licensed FSP in Cape Town
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
+                  <span>Registered Credit Provider licensed by the National Credit Regulator (NCR)</span>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  1 year of proven service
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
+                  <span>Proven track record</span>
                 </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Transparent terms and conditions
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
+                  <span>Simplified application process</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
+                  <span>Same-day approval</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
+                  <span>Transparent terms and conditions</span>
                 </li>
               </ul>
             </div>

@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Upload } from 'lucide-react';
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,13 @@ const ApplicationForm = () => {
     message: ''
   });
 
+  const [files, setFiles] = useState({
+    idDocument: null as File | null,
+    proofOfAddress: null as File | null,
+    payslips: null as File | null,
+    bankStatement: null as File | null
+  });
+
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
@@ -25,9 +33,17 @@ const ApplicationForm = () => {
     }));
   };
 
+  const handleFileChange = (field: string, file: File | null) => {
+    setFiles(prev => ({
+      ...prev,
+      [field]: file
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    console.log('Files:', files);
     // Handle form submission here
   };
 
@@ -152,6 +168,100 @@ const ApplicationForm = () => {
                   </Select>
                 </div>
 
+                {/* File Upload Section */}
+                <div className="space-y-6 border-t pt-6">
+                  <h3 className="text-lg font-semibold text-gray-800">Required Documents</h3>
+                  
+                  {/* ID/Passport Upload */}
+                  <div className="space-y-2">
+                    <Label className="text-gray-700 font-medium">
+                      ID/Passport Document *
+                    </Label>
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-quickaid-blue-500 transition-colors">
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                      <input
+                        type="file"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        onChange={(e) => handleFileChange('idDocument', e.target.files?.[0] || null)}
+                        className="hidden"
+                        id="idDocument"
+                      />
+                      <label htmlFor="idDocument" className="cursor-pointer">
+                        <span className="text-sm text-gray-600">
+                          {files.idDocument ? files.idDocument.name : 'Click to upload ID/Passport'}
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Proof of Address Upload */}
+                  <div className="space-y-2">
+                    <Label className="text-gray-700 font-medium">
+                      Proof of Address *
+                    </Label>
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-quickaid-blue-500 transition-colors">
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                      <input
+                        type="file"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        onChange={(e) => handleFileChange('proofOfAddress', e.target.files?.[0] || null)}
+                        className="hidden"
+                        id="proofOfAddress"
+                      />
+                      <label htmlFor="proofOfAddress" className="cursor-pointer">
+                        <span className="text-sm text-gray-600">
+                          {files.proofOfAddress ? files.proofOfAddress.name : 'Click to upload Proof of Address'}
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* 3 Latest Payslips Upload */}
+                  <div className="space-y-2">
+                    <Label className="text-gray-700 font-medium">
+                      3 Latest Payslips *
+                    </Label>
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-quickaid-blue-500 transition-colors">
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                      <input
+                        type="file"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        multiple
+                        onChange={(e) => handleFileChange('payslips', e.target.files?.[0] || null)}
+                        className="hidden"
+                        id="payslips"
+                      />
+                      <label htmlFor="payslips" className="cursor-pointer">
+                        <span className="text-sm text-gray-600">
+                          {files.payslips ? files.payslips.name : 'Click to upload 3 Latest Payslips'}
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* 3 Months Bank Statement Upload */}
+                  <div className="space-y-2">
+                    <Label className="text-gray-700 font-medium">
+                      3 Months Bank Statement *
+                    </Label>
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-quickaid-blue-500 transition-colors">
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                      <input
+                        type="file"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        onChange={(e) => handleFileChange('bankStatement', e.target.files?.[0] || null)}
+                        className="hidden"
+                        id="bankStatement"
+                      />
+                      <label htmlFor="bankStatement" className="cursor-pointer">
+                        <span className="text-sm text-gray-600">
+                          {files.bankStatement ? files.bankStatement.name : 'Click to upload 3 Months Bank Statement'}
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Optional Message */}
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-gray-700 font-medium">
@@ -179,7 +289,7 @@ const ApplicationForm = () => {
                 <div className="text-center text-sm text-gray-600 mt-6">
                   <p>
                     By submitting this application, you agree to our terms and conditions. 
-                    QuickAid Financial Services is a registered FSP in South Africa.
+                    QuickAid Financial Services is a registered Credit Provider licensed by the National Credit Regulator (NCR).
                   </p>
                 </div>
               </form>
