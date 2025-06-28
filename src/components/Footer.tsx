@@ -14,8 +14,9 @@ const Footer = () => {
               className="h-12 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-quickaid-blue-100 mb-4">
-              After 1 year of serving Cape Town residents, QuickAid Financial Services has become 
-              a trusted Credit Provider for fast, reliable, and transparent personal loan solutions.
+              Over time, we've established ourselves as a trusted and reliable financial partner 
+              in Cape Town. We focus exclusively on personal loans with transparent terms 
+              and competitive rates for our customers.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">
@@ -57,11 +58,6 @@ const Footer = () => {
                   className="h-8 w-auto"
                 />
                 <img 
-                  src="/lovable-uploads/ea137ea2-4127-4a46-9089-792c8fcd9201.png" 
-                  alt="Visa" 
-                  className="h-8 w-auto"
-                />
-                <img 
                   src="/lovable-uploads/c9828dc0-77f0-46af-ba72-11ef5db52ed1.png" 
                   alt="Mastercard" 
                   className="h-8 w-auto"
@@ -71,22 +67,25 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* NCR Logo */}
-        <div className="flex justify-center mb-8">
+        {/* NCR Logo and Description */}
+        <div className="flex flex-col md:flex-row justify-center items-center mb-8 space-y-4 md:space-y-0 md:space-x-4">
           <img 
             src="/lovable-uploads/c69d2515-ef87-4e52-81e2-81506178e0c0.png" 
             alt="National Credit Regulator" 
-            className="h-16 w-auto"
+            className="h-8 w-auto"
           />
+          <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
+            A registered credit provider by National Credit Regulator
+          </p>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-quickaid-blue-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-quickaid-blue-100 text-sm">
-              © 2024 QuickAid Financial Services. All rights reserved. | Cape Town, South Africa | 1 Year in Business
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
+              © 2024 QuickAid Financial Services. All rights reserved. | Cape Town, South Africa
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
               <a href="#" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>

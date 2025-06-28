@@ -61,52 +61,58 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
-                Our Mission
-              </h3>
-              <p className="text-gray-700 mb-6">
-                To simplify and fast-track loans and make them more accessible, transparent, and affordable for our customers.
-              </p>
+        <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-quickaid-blue-900 mb-3 md:mb-4">
+                  Our Mission
+                </h3>
+                <p className="text-gray-700 text-sm md:text-base">
+                  To simplify and fast-track loans and make them more accessible, transparent, and affordable for our customers.
+                </p>
+              </div>
               
-              <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
-                Our Vision
-              </h3>
-              <p className="text-gray-700 mb-6">
-                To provide accessible financial solutions that empower individuals to achieve their goals and improve their quality of life.
-              </p>
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-quickaid-blue-900 mb-3 md:mb-4">
+                  Our Vision
+                </h3>
+                <p className="text-gray-700 text-sm md:text-base">
+                  To provide accessible financial solutions that empower individuals to achieve their goals and improve their quality of life.
+                </p>
+              </div>
               
-              <h3 className="text-2xl font-bold text-quickaid-blue-900 mb-4">
-                Our Values
-              </h3>
-              <p className="text-gray-700">
-                The core values on which our business rests are integrity, professionalism, transparency, customer-focus, and diligence.
-              </p>
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-quickaid-blue-900 mb-3 md:mb-4">
+                  Our Values
+                </h3>
+                <p className="text-gray-700 text-sm md:text-base">
+                  The core values on which our business rests are integrity, professionalism, transparency, customer-focus, and diligence.
+                </p>
+              </div>
             </div>
-            <div className="bg-gradient-quickaid rounded-lg p-6 text-white">
-              <h4 className="text-xl font-semibold mb-4">Why Choose Us?</h4>
-              <ul className="space-y-2">
+            <div className="bg-gradient-quickaid rounded-lg p-4 md:p-6 text-white">
+              <h4 className="text-lg md:text-xl font-semibold mb-4">Why Choose Us?</h4>
+              <ul className="space-y-2 md:space-y-3">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
-                  <span>Registered Credit Provider licensed by the National Credit Regulator (NCR)</span>
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <span className="text-sm md:text-base">Registered Credit Provider licensed by the National Credit Regulator (NCR)</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
-                  <span>Proven track record</span>
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <span className="text-sm md:text-base">Proven track record</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
-                  <span>Simplified application process</span>
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <span className="text-sm md:text-base">Simplified application process</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
-                  <span>Same-day approval</span>
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <span className="text-sm md:text-base">Same-day approval</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2"></div>
-                  <span>Transparent terms and conditions</span>
+                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <span className="text-sm md:text-base">Transparent terms and conditions</span>
                 </li>
               </ul>
             </div>

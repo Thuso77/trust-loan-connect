@@ -71,16 +71,16 @@ const HeroSection = () => {
               <p className="text-sm text-gray-600 mb-4">Trusted by Cape Town residents</p>
               <div className="flex items-center justify-center lg:justify-start space-x-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-quickaid-blue-900">1+</div>
-                  <div className="text-sm text-gray-600">Years in Business</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-quickaid-blue-900">100%</div>
                   <div className="text-sm text-gray-600">Transparent</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-quickaid-blue-900">Fast</div>
-                  <div className="text-sm text-gray-600">Approval</div>
+                  <div className="text-sm text-gray-600">Response</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-quickaid-blue-900">NCR</div>
+                  <div className="text-sm text-gray-600">Registered</div>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const HeroSection = () => {
             </div>
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 z-20 transform rotate-3">
-              <div className="text-sm font-semibold text-quickaid-blue-900">Quick Approval!</div>
+              <div className="text-sm font-semibold text-quickaid-blue-900">Quick Response!</div>
               <div className="text-xs text-gray-600">Response in minutes</div>
             </div>
             <div className="absolute -bottom-4 -left-4 bg-quickaid-orange-500 text-white rounded-lg shadow-lg p-4 z-20 transform -rotate-3">
