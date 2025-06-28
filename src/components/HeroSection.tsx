@@ -20,7 +20,7 @@ const HeroSection = () => {
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%)`,
         backgroundSize: '400% 400%',
-        animation: 'gradient 15s ease infinite'
+        animation: 'gradientShift 15s ease infinite'
       }}
     >
       {/* Animated Background Pattern */}
@@ -35,7 +35,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-quickaid-blue-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-quickaid-blue-900 mb-6 leading-tight break-words">
               <span className="block">Get Your Personal Loan</span>
               <span className="block text-quickaid-orange-500 mt-2">Fast & Easy</span>
             </h1>
@@ -118,14 +118,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
     </section>
   );
 };
