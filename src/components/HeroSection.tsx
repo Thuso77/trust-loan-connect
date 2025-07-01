@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-quickaid-blue-900 mb-6 leading-tight break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-quickaid-blue-900 mb-6 leading-tight break-words mt-8 lg:mt-12">
               <span className="block">Get Your Personal Loan</span>
               <span className="block text-quickaid-orange-500 mt-2">Fast & Easy</span>
             </h1>
