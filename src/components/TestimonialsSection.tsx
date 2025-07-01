@@ -1,5 +1,6 @@
 
 import { Star } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -8,28 +9,36 @@ const TestimonialsSection = () => {
       location: "Cape Town",
       rating: 5,
       text: "QuickAid made getting a personal loan so easy! The process was fast, transparent, and the customer service was exceptional. I got approved within hours and had the money in my account the next day.",
-      loan: "Personal Loan"
+      loan: "Personal Loan",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      initials: "SJ"
     },
     {
       name: "Michael Chen",
-      location: "Johannesburg",
+      location: "Johannesburg", 
       rating: 5,
       text: "As a small business owner, I needed quick funding to expand my operations. QuickAid understood my needs and provided a business loan with competitive rates. Highly recommended!",
-      loan: "Business Loan"
+      loan: "Business Loan",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      initials: "MC"
     },
     {
       name: "Emma Williams",
       location: "Durban",
       rating: 5,
       text: "I was nervous about applying for my first home loan, but the team at QuickAid guided me through every step. They made my dream of homeownership a reality!",
-      loan: "Home Loan"
+      loan: "Home Loan",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      initials: "EW"
     },
     {
       name: "David Patel",
       location: "Pretoria",
       rating: 5,
       text: "Excellent service! I needed an auto loan quickly, and QuickAid delivered. The entire process was smooth, and I drove away with my new car within a week.",
-      loan: "Auto Loan"
+      loan: "Auto Loan",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      initials: "DP"
     }
   ];
 
@@ -43,6 +52,13 @@ const TestimonialsSection = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/abeb5c36-ddb4-4182-a4c6-dc45ce76307f.png" 
+              alt="QuickAid Financial Services" 
+              className="h-12 w-auto filter brightness-0 invert opacity-80"
+            />
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             What Our Customers Say
           </h2>
@@ -55,22 +71,33 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
+                <Avatar className="w-12 h-12 mr-3">
+                  <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                  <AvatarFallback className="bg-quickaid-blue-500 text-white font-semibold">
+                    {testimonial.initials}
+                  </AvatarFallback>
+                </Avatar>
+                <div>
+                  <h4 className="font-semibold text-quickaid-blue-900">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-gray-500">
+                    {testimonial.location}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
               
-              <p className="text-gray-600 mb-4 italic">
+              <p className="text-gray-600 mb-4 italic text-sm">
                 "{testimonial.text}"
               </p>
               
               <div className="border-t pt-4">
-                <h4 className="font-semibold text-quickaid-blue-900">
-                  {testimonial.name}
-                </h4>
-                <p className="text-sm text-gray-500">
-                  {testimonial.location}
-                </p>
                 <p className="text-sm text-quickaid-blue-600 font-medium">
                   {testimonial.loan}
                 </p>

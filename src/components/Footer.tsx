@@ -9,9 +9,9 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <img 
-              src="/lovable-uploads/ba3ff774-a50e-4bf1-a22b-f9c9391bbc8a.png" 
+              src="/lovable-uploads/abeb5c36-ddb4-4182-a4c6-dc45ce76307f.png" 
               alt="QuickAid Financial Services" 
-              className="h-16 w-auto mb-4"
+              className="h-16 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-quickaid-blue-100 mb-4">
               Over time, we've established ourselves as a trusted and reliable financial partner. 
@@ -89,9 +89,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-4">
               <img 
-                src="/lovable-uploads/ba3ff774-a50e-4bf1-a22b-f9c9391bbc8a.png" 
+                src="/lovable-uploads/abeb5c36-ddb4-4182-a4c6-dc45ce76307f.png" 
                 alt="QuickAid Financial Services" 
-                className="h-8 w-auto"
+                className="h-8 w-auto filter brightness-0 invert"
               />
               <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
                 © 2024 QuickAid Financial Services. All rights reserved. | South Africa

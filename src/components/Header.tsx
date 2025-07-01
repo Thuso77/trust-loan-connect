@@ -44,7 +44,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/ba3ff774-a50e-4bf1-a22b-f9c9391bbc8a.png" 
+              src="/lovable-uploads/abeb5c36-ddb4-4182-a4c6-dc45ce76307f.png" 
               alt="QuickAid Financial Services" 
               className="h-12 lg:h-16 w-auto cursor-pointer"
               onClick={() => navigate('/')}

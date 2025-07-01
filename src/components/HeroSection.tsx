@@ -17,11 +17,6 @@ const HeroSection = () => {
     <section 
       id="home" 
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-quickaid-blue-50 to-white overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%)`,
-        backgroundSize: '400% 400%',
-        animation: 'gradientShift 15s ease infinite'
-      }}
     >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -39,6 +34,15 @@ const HeroSection = () => {
               <span className="block">Get Your Personal Loan</span>
               <span className="block text-quickaid-orange-500 mt-2">Fast & Easy</span>
             </h1>
+            
+            {/* Logo after main heading */}
+            <div className="flex justify-center lg:justify-start mb-6">
+              <img 
+                src="/lovable-uploads/abeb5c36-ddb4-4182-a4c6-dc45ce76307f.png" 
+                alt="QuickAid Financial Services" 
+                className="h-16 w-auto"
+              />
+            </div>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 lg:mb-8 leading-relaxed">
               Need financial assistance? QuickAid Financial Services offers personal loans 
