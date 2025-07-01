@@ -9,9 +9,9 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <img 
-              src="/lovable-uploads/7b41a6b8-ced4-41be-9652-9569d306b406.png" 
+              src="/lovable-uploads/ba3ff774-a50e-4bf1-a22b-f9c9391bbc8a.png" 
               alt="QuickAid Financial Services" 
-              className="h-12 w-auto mb-4 filter brightness-0 invert"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-quickaid-blue-100 mb-4">
               Over time, we've established ourselves as a trusted and reliable financial partner. 
@@ -87,9 +87,16 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-quickaid-blue-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
-              © 2024 QuickAid Financial Services. All rights reserved. | South Africa
-            </p>
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/lovable-uploads/ba3ff774-a50e-4bf1-a22b-f9c9391bbc8a.png" 
+                alt="QuickAid Financial Services" 
+                className="h-8 w-auto"
+              />
+              <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
+                © 2024 QuickAid Financial Services. All rights reserved. | South Africa
+              </p>
+            </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
               <a href="/about" className="text-quickaid-blue-100 hover:text-white text-sm transition-colors">
                 About Us

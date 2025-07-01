@@ -40,13 +40,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 lg:h-32">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/7b41a6b8-ced4-41be-9652-9569d306b406.png" 
+              src="/lovable-uploads/ba3ff774-a50e-4bf1-a22b-f9c9391bbc8a.png" 
               alt="QuickAid Financial Services" 
-              className="h-16 lg:h-28 w-auto cursor-pointer"
+              className="h-12 lg:h-16 w-auto cursor-pointer"
               onClick={() => navigate('/')}
             />
           </div>
