@@ -75,9 +75,9 @@ const Footer = () => {
         {/* NCR Logo and Description */}
         <div className="flex flex-col md:flex-row justify-center items-center mb-8 space-y-4 md:space-y-0 md:space-x-4">
           <img 
-            src="/lovable-uploads/c69d2515-ef87-4e52-81e2-81506178e0c0.png" 
+            src="/lovable-uploads/69f5d8c8-df6a-4429-9f5b-c572b75597e8.png" 
             alt="National Credit Regulator" 
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           />
           <p className="text-quickaid-blue-100 text-sm text-center md:text-left">
             A registered credit provider by National Credit Regulator
