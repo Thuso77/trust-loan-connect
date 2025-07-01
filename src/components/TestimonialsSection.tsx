@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,38 +8,30 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Nomsa Mthembu",
-      location: "Johannesburg, Gauteng",
-      rating: 5,
-      text: "QuickAid made getting a personal loan so easy! The process was fast, transparent, and the customer service was exceptional. I got approved within hours and had the money in my account the next day.",
-      loan: "Personal Loan",
+      location: "Cape Town, Western Cape",
+      text: "QuickAid helped me get my personal loan quickly and easily. The process was smooth and professional.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "NM"
     },
     {
       name: "Thabo Molefe",
-      location: "Cape Town, Western Cape", 
-      rating: 5,
-      text: "As a small business owner, I needed quick funding to expand my operations. QuickAid understood my needs and provided a business loan with competitive rates. Highly recommended!",
-      loan: "Business Loan",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      location: "Bellville, Western Cape", 
+      text: "Ke fumane chelete ka bonolo haholo ho QuickAid.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "TM"
     },
     {
       name: "Zanele Ndaba",
-      location: "Durban, KwaZulu-Natal",
-      rating: 5,
-      text: "I was nervous about applying for my first home loan, but the team at QuickAid guided me through every step. They made my dream of homeownership a reality!",
-      loan: "Home Loan",
+      location: "Stellenbosch, Western Cape",
+      text: "The team at QuickAid made everything simple for me. I got my personal loan without any stress.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "ZN"
     },
     {
       name: "Sipho Dlamini",
-      location: "Pretoria, Gauteng",
-      rating: 5,
-      text: "Excellent service! I needed an auto loan quickly, and QuickAid delivered. The entire process was smooth, and I drove away with my new car within a week.",
-      loan: "Auto Loan",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      location: "Paarl, Western Cape",
+      text: "Ngithole imali engiyidingayo kalula kakhulu ku-QuickAid.",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "SD"
     }
   ];
@@ -89,19 +81,13 @@ const TestimonialsSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              
               <p className="text-gray-600 mb-4 italic text-sm">
                 "{testimonial.text}"
               </p>
               
               <div className="border-t pt-4">
                 <p className="text-sm text-quickaid-blue-600 font-medium">
-                  {testimonial.loan}
+                  Personal Loan
                 </p>
               </div>
             </div>
@@ -114,7 +100,7 @@ const TestimonialsSection = () => {
               Join Our Happy Customers
             </h3>
             <p className="text-quickaid-blue-100 mb-4">
-              Over 10,000 loans approved and counting!
+              Over 10,000 personal loans approved and counting!
             </p>
             <button 
               onClick={() => navigate('/application')}
