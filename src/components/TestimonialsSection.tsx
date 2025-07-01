@@ -10,13 +10,13 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Nomsa Mthembu",
-      location: "Cape Town, Western Cape",
+      location: "Mitchells Plain, Western Cape",
       text: "I wasn't sure where to start, but QuickAid guided me through every step. Within a few hours, the money was in my account. Impressive!",
       initials: "NM"
     },
     {
       name: "Thabo Mofele",
-      location: "Khayelitsha, Western Cape", 
+      location: "Paarl, Western Cape", 
       text: "Kadimo ya ka e tlile ka lebelo. Basebetsi ba ba na le kutlwisiso, ba thusa ka pelo e phethahetseng.",
       initials: "TM"
     },
