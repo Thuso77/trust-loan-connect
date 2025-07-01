@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -35,6 +36,7 @@ const Header = () => {
   const handleNavigation = (path: string) => {
     navigate(path);
     setIsMenuOpen(false);
+    setIsProductsOpen(false);
   };
 
   return (
@@ -60,28 +62,52 @@ const Header = () => {
               Home
             </button>
             <button 
-              onClick={() => handleNavigation('/about')}
+              onClick={() => handleNavigation('/our-story')}
               className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
             >
-              About
+              Our Story
+            </button>
+            <div className="relative group">
+              <button 
+                className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base flex items-center"
+                onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
+              >
+                Our Products
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {isProductsOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50"
+                  onMouseEnter={() => setIsProductsOpen(true)}
+                  onMouseLeave={() => setIsProductsOpen(false)}
+                >
+                  <button 
+                    onClick={() => handleNavigation('/our-products')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    All Products
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('services')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Loans
+                  </button>
+                </div>
+              )}
+            </div>
+            <button 
+              onClick={() => handleNavigation('/branches')}
+              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
+            >
+              Our Branches
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNavigation('/contact')}
               className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
             >
-              Services
-            </button>
-            <button 
-              onClick={() => handleNavigation('/faq')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
-            >
-              FAQ
-            </button>
-            <button 
-              onClick={() => handleNavigation('/blog')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
-            >
-              Blog
+              Contact Us
             </button>
           </nav>
 
@@ -91,7 +117,7 @@ const Header = () => {
               onClick={handleApplyNow}
               className="bg-gradient-quickaid hover:opacity-90 transition-opacity text-sm lg:text-base px-4 lg:px-6 py-2 lg:py-3"
             >
-              Apply Now
+              Apply For Loan
             </Button>
           </div>
 
@@ -115,34 +141,34 @@ const Header = () => {
                 Home
               </button>
               <button 
-                onClick={() => handleNavigation('/about')}
+                onClick={() => handleNavigation('/our-story')}
                 className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
               >
-                About
+                Our Story
               </button>
               <button 
-                onClick={() => scrollToSection('services')}
+                onClick={() => handleNavigation('/our-products')}
                 className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
               >
-                Services
+                Our Products
               </button>
               <button 
-                onClick={() => handleNavigation('/faq')}
+                onClick={() => handleNavigation('/branches')}
                 className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
               >
-                FAQ
+                Our Branches
               </button>
               <button 
-                onClick={() => handleNavigation('/blog')}
+                onClick={() => handleNavigation('/contact')}
                 className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
               >
-                Blog
+                Contact Us
               </button>
               <Button 
                 onClick={handleApplyNow}
                 className="bg-gradient-quickaid hover:opacity-90 transition-opacity w-full"
               >
-                Apply Now
+                Apply For Loan
               </Button>
             </div>
           </nav>

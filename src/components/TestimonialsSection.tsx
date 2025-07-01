@@ -1,44 +1,46 @@
-
 import { Star } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { useNavigate } from 'react-router-dom';
 
 const TestimonialsSection = () => {
+  const navigate = useNavigate();
+  
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      location: "Cape Town",
+      name: "Nomsa Mthembu",
+      location: "Johannesburg, Gauteng",
       rating: 5,
       text: "QuickAid made getting a personal loan so easy! The process was fast, transparent, and the customer service was exceptional. I got approved within hours and had the money in my account the next day.",
       loan: "Personal Loan",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      initials: "SJ"
+      initials: "NM"
     },
     {
-      name: "Michael Chen",
-      location: "Johannesburg", 
+      name: "Thabo Molefe",
+      location: "Cape Town, Western Cape", 
       rating: 5,
       text: "As a small business owner, I needed quick funding to expand my operations. QuickAid understood my needs and provided a business loan with competitive rates. Highly recommended!",
       loan: "Business Loan",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      initials: "MC"
+      initials: "TM"
     },
     {
-      name: "Emma Williams",
-      location: "Durban",
+      name: "Zanele Ndaba",
+      location: "Durban, KwaZulu-Natal",
       rating: 5,
       text: "I was nervous about applying for my first home loan, but the team at QuickAid guided me through every step. They made my dream of homeownership a reality!",
       loan: "Home Loan",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      initials: "EW"
+      initials: "ZN"
     },
     {
-      name: "David Patel",
-      location: "Pretoria",
+      name: "Sipho Dlamini",
+      location: "Pretoria, Gauteng",
       rating: 5,
       text: "Excellent service! I needed an auto loan quickly, and QuickAid delivered. The entire process was smooth, and I drove away with my new car within a week.",
       loan: "Auto Loan",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      initials: "DP"
+      initials: "SD"
     }
   ];
 
@@ -115,7 +117,7 @@ const TestimonialsSection = () => {
               Over 10,000 loans approved and counting!
             </p>
             <button 
-              onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => navigate('/application')}
               className="bg-white text-quickaid-blue-900 hover:bg-gray-100 transition-colors px-6 py-2 rounded-lg font-semibold"
             >
               Apply Today
