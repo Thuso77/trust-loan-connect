@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       rating: 5,
       text: "QuickAid made getting a personal loan so easy! The process was fast, transparent, and the customer service was exceptional. I got approved within hours and had the money in my account the next day.",
       loan: "Personal Loan",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "NM"
     },
     {
@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
       rating: 5,
       text: "As a small business owner, I needed quick funding to expand my operations. QuickAid understood my needs and provided a business loan with competitive rates. Highly recommended!",
       loan: "Business Loan",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "TM"
     },
     {
@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
       rating: 5,
       text: "I was nervous about applying for my first home loan, but the team at QuickAid guided me through every step. They made my dream of homeownership a reality!",
       loan: "Home Loan",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "ZN"
     },
     {
