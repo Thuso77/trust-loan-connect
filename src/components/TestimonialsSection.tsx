@@ -1,8 +1,11 @@
 
 import { useNavigate } from 'react-router-dom';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { useEffect, useRef } from 'react';
 
 const TestimonialsSection = () => {
   const navigate = useNavigate();
+  const carouselRef = useRef<any>(null);
   
   const testimonials = [
     {
@@ -37,6 +40,16 @@ const TestimonialsSection = () => {
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current?.api) {
+        carouselRef.current.api.scrollNext();
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section 
       id="testimonials" 
@@ -62,23 +75,38 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-              <div className="mb-4">
-                <h4 className="font-semibold text-quickaid-blue-900 mb-1">
-                  {testimonial.name}
-                </h4>
-                <p className="text-sm text-gray-500">
-                  {testimonial.location}
-                </p>
-              </div>
-              
-              <p className="text-gray-600 italic text-sm">
-                "{testimonial.text}"
-              </p>
-            </div>
-          ))}
+        <div className="relative max-w-4xl mx-auto">
+          <Carousel
+            ref={carouselRef}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow h-full">
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-quickaid-blue-900 mb-1">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.location}
+                      </p>
+                    </div>
+                    
+                    <p className="text-gray-600 italic text-sm">
+                      "{testimonial.text}"
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4 bg-white/20 hover:bg-white/30 text-white border-white/30" />
+            <CarouselNext className="right-4 bg-white/20 hover:bg-white/30 text-white border-white/30" />
+          </Carousel>
         </div>
 
         <div className="text-center mt-12">

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -98,12 +97,6 @@ const Header = () => {
               )}
             </div>
             <button 
-              onClick={() => handleNavigation('/branches')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
-            >
-              Our Branches
-            </button>
-            <button 
               onClick={() => handleNavigation('/contact')}
               className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
             >
@@ -151,12 +144,6 @@ const Header = () => {
                 className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
               >
                 Our Products
-              </button>
-              <button 
-                onClick={() => handleNavigation('/branches')}
-                className="text-left text-gray-700 hover:text-quickaid-blue-600 transition-colors"
-              >
-                Our Branches
               </button>
               <button 
                 onClick={() => handleNavigation('/contact')}
