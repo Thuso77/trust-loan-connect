@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -40,35 +41,35 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <img 
               src="/lovable-uploads/abeb5c36-ddb4-4182-a4c6-dc45ce76307f.png" 
               alt="QuickAid Financial Services" 
-              className="h-12 lg:h-16 w-auto cursor-pointer"
+              className="h-10 lg:h-14 w-auto cursor-pointer"
               onClick={() => navigate('/')}
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <nav className="hidden lg:flex space-x-6 xl:space-x-8 flex-1 justify-center">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
+              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Home
             </button>
             <button 
               onClick={() => handleNavigation('/our-story')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
+              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Our Story
             </button>
             <div className="relative group">
               <button 
-                className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base flex items-center"
+                className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm xl:text-base flex items-center whitespace-nowrap"
                 onMouseEnter={() => setIsProductsOpen(true)}
                 onMouseLeave={() => setIsProductsOpen(false)}
               >
@@ -98,34 +99,42 @@ const Header = () => {
             </div>
             <button 
               onClick={() => handleNavigation('/contact')}
-              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm lg:text-base"
+              className="text-gray-700 hover:text-quickaid-blue-600 transition-colors text-sm xl:text-base whitespace-nowrap"
             >
               Contact Us
             </button>
           </nav>
 
           {/* Apply Now Button - Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block flex-shrink-0">
             <Button 
               onClick={handleApplyNow}
-              className="bg-gradient-quickaid hover:opacity-90 transition-opacity text-sm lg:text-base px-4 lg:px-6 py-2 lg:py-3"
+              className="bg-gradient-quickaid hover:opacity-90 transition-opacity text-sm xl:text-base px-3 xl:px-6 py-2 xl:py-3 whitespace-nowrap"
             >
               Apply For Loan
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile/Tablet Navigation Toggle */}
+          <div className="flex items-center space-x-2 lg:hidden">
+            <Button 
+              onClick={handleApplyNow}
+              className="bg-gradient-quickaid hover:opacity-90 transition-opacity text-xs px-3 py-2 whitespace-nowrap"
+            >
+              Apply Now
+            </Button>
+            <button
+              className="p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t">
+          <nav className="lg:hidden py-4 border-t">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
@@ -151,12 +160,6 @@ const Header = () => {
               >
                 Contact Us
               </button>
-              <Button 
-                onClick={handleApplyNow}
-                className="bg-gradient-quickaid hover:opacity-90 transition-opacity w-full"
-              >
-                Apply For Loan
-              </Button>
             </div>
           </nav>
         )}
