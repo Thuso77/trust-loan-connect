@@ -9,28 +9,28 @@ const TestimonialsSection = () => {
       name: "Nomsa Mthembu",
       location: "Cape Town, Western Cape",
       text: "QuickAid helped me get my personal loan quickly and easily. The process was smooth and professional.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "NM"
     },
     {
       name: "Thabo Mofele",
       location: "Khayelitsha, Western Cape", 
       text: "Ke fumane kalimo ya ka ka potlako ebile ba ne ba le mosa haholo.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "TM"
     },
     {
       name: "Zanele Ndaba",
       location: "Stellenbosch, Western Cape",
       text: "The team at QuickAid made everything simple for me. I got my personal loan without any stress.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "ZN"
     },
     {
       name: "Sipho Dlamini",
       location: "Paarl, Western Cape",
       text: "Ngithole imali engiyidingayo kalula kakhulu ku-QuickAid.",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "SD"
     }
   ];
