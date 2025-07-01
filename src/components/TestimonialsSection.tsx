@@ -1,3 +1,4 @@
+
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,30 +9,37 @@ const TestimonialsSection = () => {
     {
       name: "Nomsa Mthembu",
       location: "Cape Town, Western Cape",
-      text: "QuickAid helped me get my personal loan quickly and easily. The process was smooth and professional.",
+      text: "I wasn't sure where to start, but QuickAid guided me through every step. Within a few hours, the money was in my account. Impressive!",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "NM"
     },
     {
       name: "Thabo Mofele",
       location: "Khayelitsha, Western Cape", 
-      text: "Ke fumane kalimo ya ka ka potlako ebile ba ne ba le mosa haholo.",
+      text: "Kadimo ya ka e tlile ka lebelo. Basebetsi ba ba na le kutlwisiso, ba thusa ka pelo e phethahetseng.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "TM"
     },
     {
       name: "Zanele Ndaba",
-      location: "Stellenbosch, Western Cape",
-      text: "The team at QuickAid made everything simple for me. I got my personal loan without any stress.",
+      location: "Khayelitsha, Western Cape",
+      text: "Ndandiphoxekile yindlela endandizama ngayo ukufumana imali. Kodwa iQuickAid indincedile ngendlela endingazange ndiyicinge. Inkqubo yakhawuleza, kwaye bathetha nam ngobubele.",
       image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "ZN"
     },
     {
       name: "Sipho Dlamini",
       location: "Paarl, Western Cape",
-      text: "Ngithole imali engiyidingayo kalula kakhulu ku-QuickAid.",
+      text: "Ngabiza, bangisiza. Angizange ngikhokhe isikhathi sami—imali ingene masisha. Bayabonga kakhulu.",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "SD"
+    },
+    {
+      name: "Aunty Cheryl Adams",
+      location: "Mitchells Plain, Western Cape",
+      text: "Ek sê, QuickAid was daar vir my toe ek regtig vasgehaak was. Hulle't nie veel gevra nie—net reguit hulp. Nou's ek reg, dankie tog!",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      initials: "CA"
     }
   ];
 
@@ -60,7 +68,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
