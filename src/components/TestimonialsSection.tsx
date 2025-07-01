@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +16,7 @@ const TestimonialsSection = () => {
       name: "Thabo Mofele",
       location: "Khayelitsha, Western Cape", 
       text: "Ke fumane kalimo ya ka ka potlako ebile ba ne ba le mosa haholo.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       initials: "TM"
     },
     {
